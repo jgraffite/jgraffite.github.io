@@ -46,6 +46,74 @@ body {
   margin: auto;
 }
 
+#fixed-alert {
+  position: fixed;
+  top: 0;
+  width: calc(100dvw - 20px);
+  background-color: #e50914;
+  color: white;
+  text-align: center;
+  z-index: 4;
+  padding: 10px;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 768px) {
+  #fixed-alert {
+    font-size: 1.5rem;
+  }
+}
+
+#content-alert {
+  background-color: white;
+  border: 1px solid #e50914;
+  z-index: 99;
+  position: fixed;
+  color: #141414;
+  text-align: center;
+  padding: 20px;
+  max-width: 45dvw;
+  top: 30px;
+}
+#content-alert::backdrop {
+  z-index: 99999;
+  display: block;
+  background-color: rgb(46, 45, 45);
+  opacity: 0.9;
+}
+#content-alert h3 {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  #content-alert h3 {
+    font-size: 2rem;
+  }
+}
+#content-alert p {
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 768px) {
+  #content-alert p {
+    font-size: 1.5rem;
+  }
+}
+#content-alert button {
+  margin: auto;
+  font-size: 0.7rem;
+}
+@media only screen and (max-width: 575px) {
+  #content-alert button {
+    padding: 10px;
+  }
+  #content-alert button i {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #content-alert button {
+    font-size: 1.5rem;
+  }
+}
+
 .video-quality {
   border: 1px solid hsla(0, 0%, 100%, 0.4);
   border-radius: 3px;
@@ -149,7 +217,7 @@ body {
 /* breakpoints */
 header {
   position: fixed;
-  top: 0;
+  top: 52px;
   left: 0;
   width: calc(100% - 40px);
   padding: 18px;
@@ -159,6 +227,7 @@ header {
 }
 @media only screen and (max-width: 575px) {
   header {
+    top: 35px;
     width: calc(100% - 14px);
     padding: 7px;
     background-color: black;
@@ -693,7 +762,7 @@ button.button--rounded i {
 }
 @media only screen and (max-width: 767px) {
   .tv-shows-carousels-box {
-    margin-top: 50px;
+    margin-top: 85px;
   }
 }
 
@@ -1147,7 +1216,7 @@ button.button--rounded i {
   z-index: 3;
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 90dvh;
   display: flex;
   justify-content: center;
   overflow: auto;
