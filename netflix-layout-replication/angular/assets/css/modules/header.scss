@@ -3,7 +3,8 @@
 header {
     //background-color: $netflix-black;
     position: fixed;
-    top: 0;
+    // top: 0;
+    top: 52px;
     left: 0;
     width: calc(100% - 40px);
     padding: 18px;
@@ -12,6 +13,7 @@ header {
     transition: background .75s;
 
     @media #{$xs} {
+        top: 35px;
         width: calc(100% - 14px);
         padding: 7px;
         background-color: black;
